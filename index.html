@@ -9,7 +9,16 @@
 </head>
 
 <body>
-    <nav></nav>
+    <nav id="navbar">
+        <header>Javascript Technical Documentation</header>
+        <a href="" class="nav-link">Javascript Basics</a>
+        <a href="" class="nav-link">Variables</a>
+        <a href="" class="nav-link">Comments</a>
+        <a href="" class="nav-link">Operators</a>
+        <a href="" class="nav-link">Conditionals</a>
+        <a href="" class="nav-link">Functions</a>
+        <a href="" class="nav-link">Events</a>
+    </nav>
     <main id="main-doc">
         <section class="main-section" id="Javascript_Basics">
             <header>
@@ -161,18 +170,22 @@
             <header>
                 <h2>Comments</h2>
             </header>
-            <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS:</p>
-            <code>/*
-                Everything in between is a comment.
-                */</code>
+            <article>
+                <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as
+                    comments. You can write comments in JavaScript just as you can in CSS:</p>
+                <code>/*
+                    Everything in between is a comment.
+                    */</code>
                 <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:</p>
                 <code>// This is a comment</code>
-            </section>
+        </section>
         <section class="main-section" id="Operators">
             <header>
                 <h2>Operators</h2>
             </header>
-            <p>An operator is a mathematical symbol that produces a result based on two values (or variables). In the following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.</p>
+            <p>An operator is a mathematical symbol that produces a result based on two values (or variables). In the
+                following table, you can see some of the simplest operators, along with some examples to try in the
+                JavaScript console.</p>
             <table>
                 <tr>
                     <th>Operators</th>
@@ -183,15 +196,15 @@
                 <tr>
                     <td>Addition</td>
                     <td>
-                        <p>	Add two numbers together or combine two strings.</p>
+                        <p> Add two numbers together or combine two strings.</p>
                     </td>
                     <td>
                         <p>+</p>
                     </td>
                     <td>
                         <code>6 + 9;
-                            'Hello ' + 'world!';
-                        </code>
+                                'Hello ' + 'world!';
+                            </code>
                     </td>
                 </tr>
                 <tr>
@@ -204,8 +217,8 @@
                     </td>
                     <td>
                         <code>9 - 3;
-                            8 * 2; // multiply in JS is an asterisk
-                            9 / 3;</code>
+                                8 * 2; // multiply in JS is an asterisk
+                                9 / 3;</code>
                     </td>
                 </tr>
                 <tr>
@@ -223,52 +236,130 @@
                 <tr>
                     <td>Equality</td>
                     <td>
-                        <p>This performs a test to see if two values are equal. It returns a <code>true/false</code> (Boolean) result.</p>
+                        <p>This performs a test to see if two values are equal. It returns a <code>true/false</code>
+                            (Boolean) result.</p>
                     </td>
                     <td>
                         <p>===</p>
                     </td>
                     <td>
                         <code>let myVariable = 3;
-                            myVariable === 4;
-                        </code>
+                                myVariable === 4;
+                            </code>
                     </td>
                 </tr>
                 <tr>
                     <td>Not, Does-not-equal</td>
                     <td>
-                        <p>This returns the logically opposite value of what it precedes. It turns a <code>true</code> into a <code>false</code>, etc.. When it is used alongside the Equality operator, the negation operator tests whether two values are <code>not</code> equal.</p>
+                        <p>This returns the logically opposite value of what it precedes. It turns a <code>true</code>
+                            into a <code>false</code>, etc.. When it is used alongside the Equality operator, the
+                            negation operator tests whether two values are <code>not</code> equal.</p>
                     </td>
                     <td>
                         <p>!, !==</p>
                     </td>
                     <td>
-                        <p>"Does-not-equal" gives basically the same result with different syntax. Here we are testing "is myVariable NOT equal to 3". This returns false because myVariable IS equal to 3:</p>
+                        <p>"Does-not-equal" gives basically the same result with different syntax. Here we are testing
+                            "is myVariable NOT equal to 3". This returns false because myVariable IS equal to 3:</p>
                         <code>let myVariable = 3;
-                            myVariable !== 3;</code>
+                                myVariable !== 3;</code>
                     </td>
                 </tr>
             </table>
-            <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for a complete list.</p>
-            <p class="note">Note: Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
+            <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for
+                a complete list.</p>
+            <p class="note">Note: Mixing data types can lead to some strange results when performing calculations. Be
+                careful that you are referring to your variables correctly, and getting the results you expect. For
+                example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected?
+                Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather
+                than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
+            </article>
         </section>
         <section class="main-section" id="Conditionals">
             <header>
                 <h2>Conditionals</h2>
             </header>
             <article>
-                <p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the if ... else statement. For example:</p>
+                <p>Conditionals are code structures used to test if an expression returns true or not. A very common
+                    form of conditionals is the <code>if ... else</code> statement. For example:</p>
+                <code>let iceCream = 'chocolate';
+                    if(iceCream === 'chocolate') {
+                      alert('Yay, I love chocolate ice cream!');
+                    } else {
+                      alert('Awwww, but chocolate is my favorite...');
+                    }
+                </code>
+                <p>The expression inside the <code>if( ... )</code> is the test. This uses the identity operator (as described above)
+                    to compare the variable <code>iceCream</code> with the string <code>chocolate</code> to see if the two are equal. If this
+                    comparison returns <code>true</code>, the first block of code runs. If the comparison is not true, the second
+                    block of code—after the <code>else</code> statement—runs instead.</p>
+
             </article>
         </section>
         <section class="main-section" id="Functions">
             <header>
                 <h2>Functions</h2>
             </header>
+            <article>
+                <p>
+                    Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:
+                </p>
+                <ol>
+                    <li><code>let myVariable = document.querySelector('h1');</code></li>
+                    <li><code>alert('hello!');</code></li>
+                </ol>
+                <p>
+                    These functions, <code>document.querySelector</code> and alert, are built into the browser. 
+                </p>
+                <p>
+                    If you see something which looks like a variable name, but it's followed by parentheses— <code>()</code> —it is likely a function. Functions often take arguments: bits of data they need to do their job. Arguments go inside the parentheses, separated by commas if there is more than one argument.
+                </p>
+                <p>For example, the <code>alert()</code> function makes a pop-up box appear inside the browser window, but we need to give it a string as an argument to tell the function what message to display.</p>
+                <p>
+                    You can also define your own functions. In the next example, we create a simple function which takes two numbers as arguments and multiplies them:
+                </p>
+                <code>
+                    function multiply(num1,num2) {
+                        let result = num1 * num2;
+                        return result;
+                      }
+                </code>
+                <p>
+                    Try running this in the console; then test with several arguments. For example:
+                </p>
+                <code>multiply(4, 7);
+                    multiply(20, 20);
+                    multiply(0.5, 3);
+                </code>                 
+                <p class="note">Note: The <code>return</code> statement tells the browser to return the <code>result</code> variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable scoping. (Read more about variable scoping.)</p>
+            </article>
         </section>
         <section class="main-section" id="Events">
             <header>
                 <h2>Events</h2>
             </header>
+            <article>
+                <p>
+                    Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the click event, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage: 
+                </p>
+                <code>document.querySelector('html').onclick = function() {
+                    alert('Ouch! Stop poking me!');
+                     }
+                </code>
+                <p>
+                    There are many ways to attach an event handler to an element. Here we select the <code><html></code> element, setting its <code>onclick</code>                               handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.
+                </p>
+                <p>
+                    Note that
+                </p>
+                <code>document.querySelector('html').onclick = function() {};</code>
+                <p>is equivalent to</p>
+                <code>let myHTML = document.querySelector('html');
+                    myHTML.onclick = function() {};
+                </code>
+                <p>It's just shorter.
+                </p>
+            </article>
         </section>
 
 
