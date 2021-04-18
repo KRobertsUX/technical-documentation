@@ -1,35 +1,33 @@
 body {
     background-color: pink;
-
 }
 
 #navbar {
     background-color: green;
     position: fixed;
-    width: 30vw;
-    height: 100vh;
     grid-area: navbar;
+}
+#main-doc {
+    background-color: purple;
+   grid-area: main;
 }
 
 .container {
+    width: 100%;
     display: grid;
-    grid-template-columns: 30vw auto;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 100vh;
     background-color: yellow;
+    grid-template-areas: "navbar main"
+                         "navbar main"  ;                    
 }
-
-
-
 
 
 #navbar ul {
     list-style-type: none;
     padding-left: 0;
 }
-#main-doc {
-    background-color: purple;
-   grid-column-start: 2;
-   grid-area: main;
-}
+
 #navbar li {
     margin: 50px 0;
     text-align: center;
