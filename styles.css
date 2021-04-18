@@ -1,3 +1,44 @@
 body {
     background-color: pink;
+
+}
+
+#navbar {
+    background-color: green;
+    position: fixed;
+    width: 30vw;
+    height: 100vh;
+    grid-area: navbar;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30vw auto;
+    background-color: yellow;
+}
+
+
+
+
+
+#navbar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#main-doc {
+    background-color: purple;
+   grid-column-start: 2;
+   grid-area: main;
+}
+#navbar li {
+    margin: 50px 0;
+    text-align: center;
+    background-color: orange;
+}
+#navbar header {
+    text-align: center;
+    padding-top: 25px;
+}
+@media only screen and (max-width: 640px) {
+
 }
