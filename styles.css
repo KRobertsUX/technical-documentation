@@ -1,6 +1,9 @@
 body {
     background-color: pink;
 }
+.display-none {
+    display: none;
+}
 
 #navbar {
     background-color: green;
@@ -39,6 +42,13 @@ body {
     padding-top: 25px;
 }
 @media only screen and (max-width: 640px) {
+    .display-none {
+        display: inline-block;
+    }
+    .ham-menu-section {
+        display: flex;
+        flex-direction: row;
+    }
     .container {
         grid-template-columns: 100vw;
         grid-template-rows: 0vh 1fr;
