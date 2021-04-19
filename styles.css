@@ -46,11 +46,16 @@ body {
             "navbar navbar"
             "main main";
     }
+    #navbar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     #navbar li {
         display: inline;
     }
-    #navbar {
-        width: 100%;
+    #navbar ul {
+        font-size: 1rem;
     }
     #main-doc {
         padding-top: 93px;
