@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <title>Javascript Technical Documentation Page</title>
 </head>
 
@@ -113,6 +115,7 @@
                     <code>let myVariable = 'Bob';
                         myVariable = 'Steve';</code>
                     <p>Note that variables may hold values that have different data types:</p>
+
                     <table>
                         <tr>
                             <th>Variable</th>
@@ -280,6 +283,7 @@
                         </td>
                     </tr>
                 </table>
+                
                 <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for
                     a complete list.</p>
                 <p class="note">Note: Mixing data types can lead to some strange results when performing calculations. Be
@@ -318,10 +322,10 @@
                     <p>
                         Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:
                     </p>
-                    <ol>
+                    <ul>
                         <li><code>let myVariable = document.querySelector('h1');</code></li>
                         <li><code>alert('hello!');</code></li>
-                    </ol>
+                    </ul>
                     <p>
                         These functions, <code>document.querySelector</code> and alert, are built into the browser. 
                     </p>
@@ -361,7 +365,7 @@
                         }
                     </code>
                     <p>
-                        There are many ways to attach an event handler to an element. Here we select the <code><html></code> element, setting its <code>onclick</code>                               handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.
+                        There are many ways to attach an event handler to an element. Here we select the <span class="code">html</span> element, setting its <code>onclick</code>                               handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.
                     </p>
                     <p>
                         Note that
