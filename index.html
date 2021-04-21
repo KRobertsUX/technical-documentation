@@ -20,10 +20,10 @@
                     <header>Javascript Technical Documentation</header>
                 </div>
                 <div class="ham-menu">      
-                    <a href=""><i class="fas fa-bars fa-2x display-none"></i></a>
+                    <a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars fa-2x display-none"></i></a>
                 </div>      
             </div>
-            <div class="display-none-mobile">
+            <div class="display-none-mobile navtoggle" id="myNavtoggle">
                 <ul>
                     <li><a href="#Javascript_Basics" class="nav-link">Javascript Basics</a></li>
                     <li><a href="#Variables" class="nav-link">Variables</a></li>
@@ -32,6 +32,8 @@
                     <li><a href="#Conditionals" class="nav-link">Conditionals</a></li>
                     <li><a href="#Functions" class="nav-link">Functions</a></li>
                     <li><a href="#Events" class="nav-link">Events</a></li>
+                    <li><a href="#Reference" class="nav-link">Reference</a></li>
+
                 </ul>
             </div>            
         </nav>    
@@ -200,97 +202,98 @@
                 <header>
                     <h2>Operators</h2>
                 </header>
-                <p>An operator is a mathematical symbol that produces a result based on two values (or variables). In the
-                    following table, you can see some of the simplest operators, along with some examples to try in the
-                    JavaScript console.</p>
-                <table>
-                    <tr>
-                        <th>Operators</th>
-                        <th>Explanation</th>
-                        <th>Symbol(s)</th>
-                        <th>Example</th>
-                    </tr>
-                    <tr>
-                        <td>Addition</td>
-                        <td>
-                            <p> Add two numbers together or combine two strings.</p>
-                        </td>
-                        <td>
-                            <p>+</p>
-                        </td>
-                        <td>
-                            <code>6 + 9;
-                                    'Hello ' + 'world!';
-                                </code>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Substraction, Multiplication, Division</td>
-                        <td>
-                            <p>These do what you'd expect them to do in basic math.</p>
-                        </td>
-                        <td>
-                            <p>-, *, /</p>
-                        </td>
-                        <td>
-                            <code>9 - 3;
-                                    8 * 2; // multiply in JS is an asterisk
-                                    9 / 3;</code>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Assignment</td>
-                        <td>
-                            <p>As you've seen already: this assigns a value to a variable.</p>
-                        </td>
-                        <td>
-                            <p>=</p>
-                        </td>
-                        <td>
-                            <code>let myVariable = 'Bob';</code>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Equality</td>
-                        <td>
-                            <p>This performs a test to see if two values are equal. It returns a <code>true/false</code>
-                                (Boolean) result.</p>
-                        </td>
-                        <td>
-                            <p>===</p>
-                        </td>
-                        <td>
-                            <code>let myVariable = 3;
-                                    myVariable === 4;
-                                </code>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Not, Does-not-equal</td>
-                        <td>
-                            <p>This returns the logically opposite value of what it precedes. It turns a <code>true</code>
-                                into a <code>false</code>, etc.. When it is used alongside the Equality operator, the
-                                negation operator tests whether two values are <code>not</code> equal.</p>
-                        </td>
-                        <td>
-                            <p>!, !==</p>
-                        </td>
-                        <td>
-                            <p>"Does-not-equal" gives basically the same result with different syntax. Here we are testing
-                                "is myVariable NOT equal to 3". This returns false because myVariable IS equal to 3:</p>
-                            <code>let myVariable = 3;
-                                    myVariable !== 3;</code>
-                        </td>
-                    </tr>
-                </table>
-                
-                <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for
-                    a complete list.</p>
-                <p class="note">Note: Mixing data types can lead to some strange results when performing calculations. Be
-                    careful that you are referring to your variables correctly, and getting the results you expect. For
-                    example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected?
-                    Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather
-                    than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
+                <article>
+                    <p>An operator is a mathematical symbol that produces a result based on two values (or variables). In the
+                        following table, you can see some of the simplest operators, along with some examples to try in the
+                        JavaScript console.</p>
+                    <table>
+                        <tr>
+                            <th>Operators</th>
+                            <th>Explanation</th>
+                            <th>Symbol(s)</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>Addition</td>
+                            <td>
+                                <p> Add two numbers together or combine two strings.</p>
+                            </td>
+                            <td>
+                                <p>+</p>
+                            </td>
+                            <td>
+                                <code>6 + 9;
+                                        'Hello ' + 'world!';
+                                    </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Substraction, Multiplication, Division</td>
+                            <td>
+                                <p>These do what you'd expect them to do in basic math.</p>
+                            </td>
+                            <td>
+                                <p>-, *, /</p>
+                            </td>
+                            <td>
+                                <code>9 - 3;
+                                        8 * 2; // multiply in JS is an asterisk
+                                        9 / 3;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Assignment</td>
+                            <td>
+                                <p>As you've seen already: this assigns a value to a variable.</p>
+                            </td>
+                            <td>
+                                <p>=</p>
+                            </td>
+                            <td>
+                                <code>let myVariable = 'Bob';</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Equality</td>
+                            <td>
+                                <p>This performs a test to see if two values are equal. It returns a <code>true/false</code>
+                                    (Boolean) result.</p>
+                            </td>
+                            <td>
+                                <p>===</p>
+                            </td>
+                            <td>
+                                <code>let myVariable = 3;
+                                        myVariable === 4;
+                                    </code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Not, Does-not-equal</td>
+                            <td>
+                                <p>This returns the logically opposite value of what it precedes. It turns a <code>true</code>
+                                    into a <code>false</code>, etc.. When it is used alongside the Equality operator, the
+                                    negation operator tests whether two values are <code>not</code> equal.</p>
+                            </td>
+                            <td>
+                                <p>!, !==</p>
+                            </td>
+                            <td>
+                                <p>"Does-not-equal" gives basically the same result with different syntax. Here we are testing
+                                    "is myVariable NOT equal to 3". This returns false because myVariable IS equal to 3:</p>
+                                <code>let myVariable = 3;
+                                        myVariable !== 3;</code>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for
+                        a complete list.</p>
+                    <p class="note">Note: Mixing data types can lead to some strange results when performing calculations. Be
+                        careful that you are referring to your variables correctly, and getting the results you expect. For
+                        example, enter <code>'35' + '25'</code> into your console. Why don't you get the result you expected?
+                        Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather
+                        than adding numbers. If you enter <code>35 + 25</code> you'll get the total of the two numbers.</p>
                 </article>
             </section>
             <section class="main-section" id="Conditionals">
@@ -379,7 +382,14 @@
                     </p>
                 </article>
             </section>    
-
+            <section class="Reference" id="Reference">
+                <header>
+                    <h2>Reference</h2>
+                </header>
+                <article>
+                    <p>The information from this page has been taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target=_blank>Mozilla Developer Network, MDN</a>.</p>
+                </article>
+            </section>
 
         </main>
     </div>    
