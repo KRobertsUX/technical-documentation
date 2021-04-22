@@ -131,6 +131,12 @@ table code {
     color: rgb(145, 0, 0);
 }
 
+a {
+    color: rgb(55, 55, 175);
+}
+a:hover {
+    color: rgb(145, 0, 0);
+}
 /* Media Queries ============================ */
 @media only screen and (max-width: 640px) {
     .display-none {
@@ -179,25 +185,6 @@ table code {
     #main-doc {
         padding-top: 63px;
     }
-
-
-
-    /* .navtoggle  li .icon {
-        position:absolute;
-        right: 0;
-        top: -4px;
-        font-size: 30px;
-        padding-right: 0px;
-      }
-    .navtoggle.responsive nav {
-        padding: 24px 0 0;
-      }
-      .navtoggle.responsive li:last-child {
-        padding: 0 0 10px;
-      }
-      .navtoggle, .navtoggle.responsive {
-        position: relative;
-      }  */
 
       .navtoggle.responsive {
           display: block;
