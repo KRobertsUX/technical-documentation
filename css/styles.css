@@ -23,6 +23,8 @@ code {
     padding: 20px;
     border-radius: 2px;
     border-left: 4px solid rgb(55, 55, 175);
+    -ms-word-break: break-all; 
+    word-break: break-all;
 }
 
 .note {
@@ -146,6 +148,12 @@ a:hover {
     color: rgb(145, 0, 0);
 }
 /* Media Queries ============================ */
+@media only screen and (max-width: 720px) {
+    table {
+        font-size: 14px;
+    }
+}
+
 @media only screen and (max-width: 640px) {
     .display-none {
         display: inline-block;
@@ -208,5 +216,9 @@ a:hover {
     .main-header header {
         font-size: 1.5rem;
         font-weight: 600;
+    }
+
+    table {
+        font-size: 12px;
     }
 }
