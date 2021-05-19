@@ -125,7 +125,7 @@ table code {
 #main-doc {
     background-color:  rgb(250, 250, 250);
    grid-area: main;
-   padding: 10px 40px;
+   padding: 10px 30px;
 }
 
 #navbar li a:hover {
@@ -166,7 +166,7 @@ a:hover {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 15px;
+        padding: 15px 30px;
     }
     .main-header {
         display: inline-block;
